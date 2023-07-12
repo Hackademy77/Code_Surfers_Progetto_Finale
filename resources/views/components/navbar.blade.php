@@ -25,11 +25,22 @@
                     aria-expanded="false" aria-label="Toggle navigation" href="{{route('article.index')}}">ARTICOLI
                   </a>
                 </li>
-                <li class="nav-item">
+                <div class="dropdown">
+                  {{-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> --}}
+                    
+                  {{-- </button> --}}
+                  <li class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+                {{-- <li class="nav-item">
                   <a class="page-scroll" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
                     aria-expanded="false" aria-label="Toggle navigation" href="">CATEGORIE
                   </a>
-                </li>
+                </li> --}}
               </ul>
             </div>
             <ul class="header-btn d-md-flex">
@@ -43,8 +54,7 @@
                   <li><a href="#" class="fw-bold">I MIEI ANNUNCI</a></li>
                   <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                  <li><button type="submit" class="btn fw-bold">LOGOUT <i class="fa-solid fa-right-from-bracket" style="color: #000000;"></i> </button></li>
-                 
+                  <li><button type="submit" class="btn fw-bold ">LOGOUT <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i> </button></li>
                 </form>
                 </ul>
               </li>
@@ -55,7 +65,7 @@
               <a href="{{ route('login') }}"  class=" main-btn btn-hover d-none d-md-block fw-bold mt-2 mx-2">ACCEDI &nbsp; <i class="fa-solid fa-user"></i></a>
               @endif
               <li>
-                <a href="post-ad.html" class="main-btn btn-hover d-none d-md-block fw-bold mt-2">LAVORA CON NOI &nbsp; <i class="fa-solid fa-briefcase"></i></a>
+                <a href="{{route('careers')}}" class="main-btn btn-hover d-none d-md-block fw-bold mt-2">LAVORA CON NOI &nbsp; <i class="fa-solid fa-briefcase"></i></a>
               </li>
             </ul>
           </nav> <!-- navbar -->

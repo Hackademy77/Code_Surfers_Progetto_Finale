@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
+
+header{
+  background-image: url('https://images.unsplash.com/photo-1611702700114-ac96de0952e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1308,6 +1313,7 @@ textarea:focus {
 .navbar-nav .nav-item {
   position: relative;
   margin-right: 40px;
+
 }
 
 .navbar-nav .nav-item:last-child {
@@ -1692,16 +1698,20 @@ textarea:focus {
   color: #fff;
 }
 
+.dropdown-toggle{
+  color: #484e5e;
+}
+
 .dropdown-nav {
   position: absolute;
   top: 110%;
   left: 0;
   width: 200px;
-  background: #fff;
+  background: #4e566c;
   padding: 20px;
   opacity: 0;
   visibility: hidden;
-  min-height: 300px;
+  min-height: 50px;
   transition: all 0.3s ease-out 0s;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
@@ -1727,7 +1737,16 @@ textarea:focus {
 }
 
 .dropdown-nav li a {
-  color: #333F57;
+  color: #ffffff;
+}
+
+.dropdown-nav li:hover button {
+  display: block;
+  color: #FF6B6B;
+}
+
+.dropdown-nav li button {
+  color: #ffffff;
 }
 
 .header-btn li {
@@ -1739,7 +1758,10 @@ textarea:focus {
   visibility: visible;
 }
 .hero-area {
-  background-image: url("../images/hero/hero-bg.jpg");
+  background-image: url("https://images.unsplash.com/photo-1611702700114-ac96de0952e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80");
+  height: auto;
+  max-width: 100%;
+  display: block;
   position: relative;
   z-index: 1;
 }
@@ -1752,7 +1774,7 @@ textarea:focus {
   top: 0;
   left: 0;
   z-index: -1;
-  background: linear-gradient(rgba(51, 63, 87, 0.79) 0%, #333f57 100%);
+  background: linear-gradient(rgba(51, 63, 87, 0.644) 0%, #333f57 100%);
 }
 
 .hero-area .hero-content {
