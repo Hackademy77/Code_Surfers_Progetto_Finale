@@ -25,12 +25,12 @@
 		<div class="container">
 			<div class="search-wrapper">
 				<form action="#">
-					<div class="row justify-content-center">
+					<div class="row justify-content-center mb-2">
 						<center><h2>Cerca articoli...</h2></center>
 						<div class="col-lg-3 col-sm-5 col-10">
 							<div class="search-input">
-								<label for="keyword"><i class="fa-solid fa-magnifying-glass" style="color: #ff6b6b;"></i></label>
 								<input type="text" name="keyword" id="keyword" placeholder="Cerca...">
+								<i class="fa-solid fa-magnifying-glass" style="color: #ff6b6b;"></i>
 							</div>
 						</div>
 						<div class="col-lg-3 col-sm-5 col-10">

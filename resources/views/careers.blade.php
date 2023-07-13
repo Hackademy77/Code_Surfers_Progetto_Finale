@@ -52,15 +52,15 @@
                                     @csrf
                                     <div class="app-form">
                                         <div class="app-form-group">
-                                            <input class="app-form-control input-mail" type="email" id="email" name="email" placeholder="EMAIL" value="{{old('email') ?? Auth::user()->email}}">
-                                        </div>
-                                        <div class="app-form-group">
                                             <select name="role" id="role" class=" app-form-control">
                                                 <option value="">Seleziona il ruolo</option>
                                                 <option value="admin">Amministratore</option>
                                                 <option value="revisor">Revisore</option>
                                                 <option value="writer">Redattore</option>
                                             </select>
+                                        </div>
+                                        <div class="app-form-group mt-5">
+                                            <input class="app-form-control input-mail" type="email" id="email" name="email" placeholder="EMAIL" value="{{old('email') ?? Auth::user()->email}}">
                                         </div>
                                         <div class="app-form-group message">
                                             {{-- <input class="app-form-control input-mail" placeholder="MESSAGE"> --}}

@@ -25,10 +25,16 @@
                     aria-expanded="false" aria-label="Toggle navigation" href="{{route('article.index')}}">ARTICOLI
                   </a>
                 </li>
+                @auth
+                @if (Auth::user()->is_admin)
+                <li class="nav-item">
+                  <a class="page-scroll @if(Route::currentRouteName() == 'admin.dashboard') active @endif" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
+                    aria-expanded="false" aria-label="Toggle navigation" href="{{route('admin.dashboard')}}">ADM
+                  </a>
+                </li>
+                @endif
+                @endauth
                 <div class="dropdown">
-                  {{-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> --}}
-                    
-                  {{-- </button> --}}
                   <li class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -36,11 +42,7 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </div>
-                {{-- <li class="nav-item">
-                  <a class="page-scroll" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
-                    aria-expanded="false" aria-label="Toggle navigation" href="">CATEGORIE
-                  </a>
-                </li> --}}
+               
               </ul>
             </div>
             <ul class="header-btn d-md-flex">
@@ -59,13 +61,10 @@
                 </ul>
               </li>
               @else
-              {{-- <a href="{{ route('login') }}" class="btn btn-outline-danger fw-bold btn-hover main-btn d-md-block">
-                <span class=" "><i class="fa-regular fa-user"></i> ACCEDI</span>
-              </a> --}}
               <a href="{{ route('login') }}"  class=" main-btn btn-hover d-none d-md-block fw-bold mt-2 mx-2">ACCEDI &nbsp; <i class="fa-solid fa-user"></i></a>
               @endif
               <li>
-                <a href="{{route('careers')}}" class="main-btn btn-hover d-none d-md-block fw-bold mt-2">LAVORA CON NOI &nbsp; <i class="fa-solid fa-briefcase"></i></a>
+                <a href="{{route('careers')}}" class="main-btn btn-hover d-none d-md-block fw-bold mt-3">LAVORA CON NOI &nbsp; <i class="fa-solid fa-briefcase"></i></a>
               </li>
             </ul>
           </nav> <!-- navbar -->
