@@ -13,9 +13,6 @@
     </div>
     <div class="container">
         <div class="row">
-			
-
-					
 					
 						<p class="card-text">{{$article->subtitle}}</p>
 						<p class="fst-italic small">{{$article->category->name}}</p>
@@ -23,6 +20,10 @@
 					<div class=" d-flex justify-content-between align-items-center">
 						Redatto il: {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
                         <p>{{$article->body}}</p>
+                        @if (Auth::user() && Auth::user()->is_revisor)
+                        <a href="{{ route('revisor.acceptArticle', compact('article'))}}" class="btn btn-success text-white">Accetta articolo</a>
+                        <a href="{{ route('revisor.rejectArticle', compact('article'))}}" class="btn btn-success text-white">Rifiuta articolo</a>
+                        @endif
 						<a href="{{route('homepage')}}" class="btn btn-info text-white">Torna indietro</a>
 					</div>
 			

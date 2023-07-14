@@ -34,6 +34,15 @@
                 </li>
                 @endif
                 @endauth
+                @auth
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                  <a class="page-scroll @if(Route::currentRouteName() == 'revisor.dashboard') active @endif" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
+                    aria-expanded="false" aria-label="Toggle navigation" href="{{route('revisor.dashboard')}}">REV
+                  </a>
+                </li>
+                @endif
+                @endauth
                 <div class="dropdown">
                   <li class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
                   <ul class="dropdown-menu">
