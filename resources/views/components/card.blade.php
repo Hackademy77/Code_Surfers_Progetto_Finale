@@ -49,7 +49,7 @@
   font-size: 0.8rem;
   font-weight: bold;
   color: white;
-  background: red;
+  background: #ff6b6b;
   padding: 0.5rem 1.3rem 0.5rem 1rem;
   text-transform: uppercase;
   position: absolute;
@@ -69,7 +69,7 @@
 .blog-hashtag {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--clr-link);
+  color: black;
 }
 
 .blog-title {
@@ -78,8 +78,8 @@
 }
 
 .blog-description {
-  color: var(--clr-gray-med);
-  font-size: 0.9rem;
+  color: black;
+  font-size: 1.2rem;
 }
 
 .card-profile {
@@ -104,10 +104,9 @@
 }
 
 .profile-followers {
-  color: var(--clr-gray-med);
+  color: black;
   font-size: 0.9rem;
 }
-
 
 </style>
 
@@ -121,17 +120,19 @@
           </div>
           <div class="card-body">
             <h2 class="blog-title">{{$article->title}}</h2>
-            <p class="blog-description"> {{$article->subtitle}}</p>
-            <p>{{$article->body}}</p>
-            <a href="{{route('article.show', compact('article'))}}" class="text-uppercase text-dark fw-bold">Continua a leggere...</a>
+            <p class="blog-description display-3"> {{$article->subtitle}}</p>
+            <p class="blog-description display-5">{{$article->body}}</p>
+            <a href="{{route('article.show', compact('article'))}}" class="text-touppercase mt-2 text-dark fw-bold">Continua a leggere...</a>
             <div class="card-profile">
               <img class="profile-img" src='https://images.unsplash.com/photo-1554780336-390462301acf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
               
-              <div class="card-profile-info">
+              <div class="card-profile-info row">
+                <div class="col-6 col-md-6 d-flex justify-content-start align-items-end">
                 <h3 class="profile-name">Redatto il: {{$article->created_at->format('d/m/Y')}} </h3> 
-               
-                <h3 class="profile-followers">Da: <a class="fw-bold" href="{{route('filter.user', ['user' =>$article->user->id])}}">{{$article->user->name}}</a></h3>
-                
+              </div>
+              <div class="col-6 col-md-6 d-flex justify-content-end align-items-end">
+                <h3 class="profile-followers">Da: <a class="fw-bold text-black text-capitalize"  href="{{route('filter.user', ['user' =>$article->user->id])}}">{{$article->user->name}}</a></h3>
+              </div>
               </div>
             </div>
           </div>
