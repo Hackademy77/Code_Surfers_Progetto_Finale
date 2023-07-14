@@ -44,11 +44,11 @@
                 @endif
                 @endauth
                 <div class="dropdown">
-                  <li class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
+                  <li class="dropdown-toggle cursor-custom" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  @foreach ($categories as $category)
+                  <li ><a class="dropdown-item text-capitalize" href="{{route('filter.category', compact('category'))}}">{{$category->name}}</a></li>
+                  @endforeach                
                   </ul>
                 </div>
                
@@ -65,12 +65,12 @@
                   <li><a href="#" class="fw-bold">I MIEI ANNUNCI</a></li>
                   <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                  <li><button type="submit" class="btn fw-bold ">LOGOUT <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i> </button></li>
+                  <li><button type="submit" class="btn fw-bold  hover-log-custom">LOGOUT  <i class="fa-solid fa-right-from-bracket"> </i></button></li>
                 </form>
                 </ul>
               </li>
               @else
-              <a href="{{ route('login') }}"  class=" main-btn btn-hover d-none d-md-block fw-bold mt-2 mx-2">ACCEDI &nbsp; <i class="fa-solid fa-user"></i></a>
+              <a href="{{ route('login') }}"  class=" main-btn btn-hover d-none d-md-block fw-bold m-3 mx-2">ACCEDI &nbsp; <i class="fa-solid fa-user"></i></a>
               @endif
               <li>
                 <a href="{{route('careers')}}" class="main-btn btn-hover d-none d-md-block fw-bold mt-3">LAVORA CON NOI &nbsp; <i class="fa-solid fa-briefcase"></i></a>

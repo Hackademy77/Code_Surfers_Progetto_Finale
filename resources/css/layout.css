@@ -1655,6 +1655,10 @@ textarea:focus {
   padding-right: 50px;
 }
 
+.cursor-custom {
+  cursor: pointer;
+}
+
 .header-btn .main-btn.account-btn::after {
   content: '';
   position: absolute;
@@ -1742,6 +1746,9 @@ textarea:focus {
 
 .dropdown-nav li:hover button {
   display: block;
+  color: #FF6B6B;
+}
+.dropdown-nav li button:hover i {
   color: #FF6B6B;
 }
 

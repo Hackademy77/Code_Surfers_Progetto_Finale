@@ -33,18 +33,20 @@
 								{{-- <i class="fa-solid fa-magnifying-glass" style="color: #ff6b6b;"></i> --}}
 							</div>
 						</div>
-						<div class="col-lg-3 col-sm-5 col-10">
+						{{-- <div class="col-lg-3 col-sm-5 col-10">
 							<div class="search-input">
 								<label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
-								<select name="category" class="form-select">
-									<option value="0" selected disabled>Categorie...</option>	
+								<div class="dropdown">
+									<option value="0" class="dropdown-toggle cursor-custom" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</option>
+									<ul class="dropdown-menu">
 									@foreach ($categories as $category)
-									<option value="{{ $category->id }}">{{ $category->name }}</option>
-									@endforeach
-								</select>
+									<li ><a class="dropdown-item" href="{{route('filter.category', compact('category'))}}">{{$category->name}}</a></li>
+									@endforeach                
+									</ul>
+								  </div>
 								
 							</div>
-						</div>
+						</div> --}}
 						<div class="col-lg-2 col-sm-5 col-10">
 							<div class="search-btn">
 								<button class="main-btn btn-hover" type="submit">Ricerca<i class="fa-brands fa-searchengin fa-beat" style="color: #ffffff;"></i></button>
