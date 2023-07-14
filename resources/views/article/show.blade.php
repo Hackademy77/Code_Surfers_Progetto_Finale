@@ -24,7 +24,7 @@
                         <a href="{{ route('revisor.acceptArticle', compact('article'))}}" class="btn btn-success text-white">Accetta articolo</a>
                         <a href="{{ route('revisor.rejectArticle', compact('article'))}}" class="btn btn-success text-white">Rifiuta articolo</a>
                         @endif
-						<a href="{{route('homepage')}}" class="btn btn-info text-white">Torna indietro</a>
+						<a href="{{route('revisor.dashboard')}}" class="btn btn-info text-white">Torna indietro</a>
 					</div>
 			
 			

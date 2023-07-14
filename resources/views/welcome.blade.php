@@ -30,7 +30,7 @@
 						<div class="col-lg-3 col-sm-5 col-10">
 							<div class="search-input">
 								<input type="text" name="keyword" id="keyword" placeholder="Cerca...">
-								<i class="fa-solid fa-magnifying-glass" style="color: #ff6b6b;"></i>
+								{{-- <i class="fa-solid fa-magnifying-glass" style="color: #ff6b6b;"></i> --}}
 							</div>
 						</div>
 						<div class="col-lg-3 col-sm-5 col-10">
