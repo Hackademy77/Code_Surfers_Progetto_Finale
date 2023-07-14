@@ -22,7 +22,7 @@ return new class extends Migration
             'name'=>'Admin',
             'email'=>'admin@codesurfer.it',
             'password'=> bcrypt('12345678'),
-            'admin'=> true,
+            'is_admin'=> true,
         ]);
     }
 
