@@ -15,11 +15,11 @@
                 <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == 'homepage') active @endif" href="/">HOME</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == '#') active @endif" data-toggle="collapse" data-target="#sub-nav1" aria-controls="sub-nav1"
                     aria-expanded="false" aria-label="Toggle navigation" href="javascript:void(0)">CHI SIAMO
                   </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == 'article.index') active @endif" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
                     aria-expanded="false" aria-label="Toggle navigation" href="{{route('article.index')}}">ARTICOLI

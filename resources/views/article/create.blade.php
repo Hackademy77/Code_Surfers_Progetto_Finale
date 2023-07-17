@@ -19,34 +19,34 @@
                     <form  action="{{ route('article.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <input class="form-control item border border-3 @error('title') is-invalid @enderror"  type="text" value="{{ old('title') }}" name="title" id="username" placeholder="Titolo" required>
+                            <input class="form-control item border @error('title') is-invalid @enderror"  type="text" value="{{ old('title') }}" name="title" id="username" placeholder="Titolo" required>
                             @error('title')
                             <div class="alert text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mt-2">
-                            <input class="form-control item border border-3 @error('subtitle') is-invalid @enderror" type="text" name="subtitle" value="{{ old('subtitle') }}" id="password" placeholder="Sottotitolo" required>
+                            <input class="form-control item border @error('subtitle') is-invalid @enderror" type="text" name="subtitle" value="{{ old('subtitle') }}" id="password" placeholder="Sottotitolo" required>
                             @error('subtitle')
                             <div class="alert text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="">
                             <p class="">Inserisci immagine:</p>
-                            <input type="file"  name="image" class="form-control border border-3">
+                            <input type="file"  name="image" class="form-control border">
                         </div>
                         <div class="form-group mb-3">
                             <p>Scegli la categoria:</p>
-                            <select name="category" class="form-select border border-3">
+                            <select name="category" class="form-select border ">
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group mt-4">
-                            <textarea placeholder="Inserisci il corpo del testo..." name="body" cols="30" rows="7" class="form-control border border-3">{{old('body')}}</textarea>
+                            <textarea placeholder="Inserisci il corpo del testo..." name="body" cols="30" rows="7" class="form-control border">{{old('body')}}</textarea>
                         </div>
                         <div class="form-group d-flex justify-content-center">
-                            <button type="submit" class="btn border border-3">Salva</button>
+                            <button type="submit" class="main-btn text-white text-uppercase">Inserisci articolo</button>
                         </div>
                     </form>
                 </div>

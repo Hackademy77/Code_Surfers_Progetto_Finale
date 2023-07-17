@@ -43,8 +43,8 @@
                 <a class="text-dark btn button-62 buttom-custom-rev" href="{{ route('revisor.rejectArticle', compact('article'))}}">Rifiuta articolo</a>
                 @endif
                     </div>
-                <div class="col-12 col-md-6 mt-5 d-flex justify-content-end">
-                    <a href="{{route('revisor.dashboard')}}" class="btn text-dark button-62">Torna indietro</a>
+                <div class="col-12 col-md-6 mt-5 mb-5 d-flex justify-content-end">
+                    <a href="{{route('homepage')}}" class="btn text-dark button-62 text-white">Torna indietro</a>
                 </div>	
                    
                 </div>

@@ -119,8 +119,8 @@
             <img class="banner-img" src='{{Storage::url($article->image)}}' alt=''>
           </div>
           <div class="card-body">
-            <h2 class="blog-title">{{$article->title}}</h2>
-            <p class="blog-description display-3"> {{$article->subtitle}}</p>
+            <h3 class="blog-title ">{{$article->title}}</h3>
+            <h5 class="blog-description display-3 fw-bold border-top border-bottom border-dark p-2"> {{$article->subtitle}}</h5>
             <p class="blog-description display-5">{{$article->body}}</p>
             <a href="{{route('article.show', compact('article'))}}" class="text-touppercase mt-2 text-dark fw-bold">Continua a leggere...</a>
             <div class="card-profile">
