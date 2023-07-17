@@ -72,9 +72,11 @@
               @else
               <a href="{{ route('login') }}"  class=" main-btn btn-hover d-none d-md-block fw-bold m-3 mx-2">ACCEDI &nbsp; <i class="fa-solid fa-user"></i></a>
               @endif
+              @auth
               <li>
                 <a href="{{route('careers')}}" class="main-btn btn-hover d-none d-md-block fw-bold mt-3">LAVORA CON NOI &nbsp; <i class="fa-solid fa-briefcase"></i></a>
               </li>
+              @endauth
             </ul>
           </nav> <!-- navbar -->
         </div>

@@ -10,17 +10,14 @@
 </head>
 <body>
 
-
     @if (session('message'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">     
+    <div class="alert alert-success alert-dismissible fade show" style="margin-top: 200px" role="alert">     
         {{ session('message') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-@endif
-
+    @endif
 
 {{-- <x-navbar /> --}}
-
 
     <div class="vh-50">
         {{ $slot }}
