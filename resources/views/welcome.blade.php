@@ -22,12 +22,12 @@
 	<div class="search-area">
 		<div class="container">
 			<div class="search-wrapper">
-				<form action="#">
+				<form action="{{route('article.search')}}" method="GET">
 					<div class="row justify-content-center mb-2">
 						<center><h2>Cerca articoli...</h2></center>
 						<div class="col-lg-3 col-sm-5 col-10">
 							<div class="search-input">
-								<input type="text" name="keyword" id="keyword" placeholder="Cerca...">
+								<input type="search" name="query" aria-label="Search" id="keyword" placeholder="Cerca...">
 							</div>
 						</div>
 						<div class="col-lg-2 col-sm-5 col-10">
