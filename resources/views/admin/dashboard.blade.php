@@ -1,13 +1,14 @@
 <x-layout>
-    <div class="margin-custom"></div>
+    <div class="margin-admin"></div>
     <div class="container-fluid p-5 bg-info text-center text-white">
         <div class="row justify-content-center">
             <h1 class="display-1">Bentornato, nella dashboard dell' Amministratore</h1>
         </div>
     </div>
-    @if (session('message'))
-        <div class="alert alert-success text-center">
-            {{session('message')}}
+
+ @if (session('messaggio'))
+        <div class="alert message-create-dashboard text-center">
+            {{session('messaggio')}}
         </div>
     @endif
 
@@ -37,12 +38,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
 </x-layout>

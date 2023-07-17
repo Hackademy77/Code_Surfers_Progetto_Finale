@@ -19,18 +19,18 @@ class AdminController extends Controller
         $user->update([
             'is_admin' => true,
         ]);
-        return redirect(route('admin.dashboard'))->with('message', 'Hai reso amministratore l\'utente');
+        return redirect(route('admin.dashboard'))->with('messaggio', 'Hai reso amministratore l\'utente');
     }
     public function setRevisor(User $user){
         $user->update([
             'is_revisor' => true,
         ]);
-        return redirect(route('admin.dashboard'))->with('message', 'Hai reso revisore l\'utente');
+        return redirect(route('admin.dashboard'))->with('messaggio', 'Hai reso revisore l\'utente');
     }
     public function setWriter(User $user){
         $user->update([
             'is_writer' => true,
         ]);
-        return redirect(route('admin.dashboard'))->with('message', 'Hai reso redattore l\'utente');
+        return redirect(route('admin.dashboard'))->with('messaggio', 'Hai reso redattore l\'utente');
     }
 }

@@ -13,7 +13,7 @@
 
 
     @if (session('message'))
-    <div class="alert alert-dismissible fade show text-dark" style="margin-top: 80px; " role="alert">     
+    <div class="alert alert-dismissible fade show message-create" role="alert">     
         {{ session('message') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>

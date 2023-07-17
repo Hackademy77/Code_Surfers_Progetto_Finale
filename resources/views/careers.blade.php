@@ -54,9 +54,9 @@
                                         <div class="app-form-group">
                                             <select name="role" id="role" class=" app-form-control">
                                                 <option value="">Seleziona il ruolo</option>
-                                                <option value="admin">Amministratore</option>
-                                                <option value="revisor">Revisore</option>
-                                                <option value="writer">Redattore</option>
+                                                <option value="admin" class="text-dark">Amministratore</option>
+                                                <option value="revisor" class="text-dark">Revisore</option>
+                                                <option value="writer" class="text-dark">Redattore</option>
                                             </select>
                                         </div>
                                         <div class="app-form-group mt-5">

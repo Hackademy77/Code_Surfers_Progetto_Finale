@@ -7,11 +7,59 @@
   --clr-popular: #ff6b6b;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
+.category-custom {
+    font-size: 25px;
+    
+}
+.text-custom-show {
+    font-size: 20px;
+}
+
+.auth-show{
+    font-size: 20px;
+    color: black;
+}
+.details-custom {
+    font-size: 20px;
+    color: black;
+}
+.buttom-custom-rev{
+    height: 38px;
+}
+
+
+
+
+
+/* CSS */
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 
@@ -108,11 +156,49 @@
   font-size: 0.9rem;
 }
 
+.trunc-body{
+ overflow: hidden;
+ display: -webkit-box;
+ -webkit-line-clamp: 4;
+ -webkit-box-orient: vertical;
+}
+
+
 </style>
 
 
 
-    <div class="wrapper">
+<div class="wrapper">
+  <div class="card">
+    <div class="card-banner">
+      <p class="category-tag popular"><a class="text-light fw-bold" href="{{route('filter.category', ['category' =>$article->category->id])}}">{{$article->category->name}}</a></p>
+      <img class="banner-img" src='{{Storage::url($article->image)}}' alt=''></a>
+      
+    </div>
+    <div class="card-body">
+      <a href="{{route('article.show', compact('article'))}}"><h3 class="blog-title ">{{$article->title}}</h3></a>
+      <a href="{{route('article.show', compact('article'))}}"><h5 class="blog-description display-3 fw-bold border-top border-bottom border-dark py-2"> {{$article->subtitle}}</h5></a>
+      <a href="{{route('article.show', compact('article'))}}"><p class="blog-description trunc-body display-5">{{$article->body}}</p></a>
+      <a href="{{route('article.show', compact('article'))}}" class="text-touppercase mt-2 text-dark fw-bold">Continua a leggere...</a>
+      <div class="card-profile">
+        <img class="profile-img" src='https://images.unsplash.com/photo-1554780336-390462301acf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
+        
+        <div class="card-profile-info row">
+          <div class="col-6 col-md-12 d-flex justify-content-start align-items-end">
+          <h3 class="profile-name">Redatto il: {{$article->created_at->format('d/m/Y')}} </h3> 
+        </div>
+        <div class="col-6 col-md-12 d-flex justify-content-start align-items-start">
+          <h3 class="profile-name">Da: <a class="fw-bold text-capitalize"  href="{{route('filter.user', ['user' =>$article->user->id])}}">{{$article->user->name}}</a></h3>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    {{-- <div class="wrapper">
         <div class="card">
           <div class="card-banner">
             <p class="category-tag popular"><a class="text-light fw-bold" href="{{route('filter.category', ['category' =>$article->category->id])}}">{{$article->category->name}}</a></p>
@@ -137,5 +223,5 @@
             </div>
           </div>
         </div>
-    </div>
+    </div> --}}
  
