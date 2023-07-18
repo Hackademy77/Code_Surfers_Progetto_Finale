@@ -1,8 +1,8 @@
 <x-layout>
     <div class="margin-admin"></div>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid pt-5 bg-info text-center text-white mt-5 background-dash">
         <div class="row justify-content-center">
-            <h1 class="display-1">Bentornato, nella dashboard dell' Amministratore</h1>
+            <h1 class="display-3 fw-bold">Bentornato, nella dashboard dell' Amministratore</h1>
         </div>
     </div>
 

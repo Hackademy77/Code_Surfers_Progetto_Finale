@@ -17,9 +17,9 @@
             <td>{{Str::limit($article->user->name, 5)}}</td>
         <td>
             @if (is_null($article->is_accepted))
-            <a href="{{ route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
+            <a href="{{ route('article.show', compact('article'))}}" class="btn btn-info text-white"><i class="fa-solid fa-spinner fa-spin" style="color: #ffffff;"></i></a>
                 @else
-            <a href="{{ route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white">Revisiona</a>
+            <a href="{{ route('revisor.undoArticle', compact('article'))}}" class="btn btn-danger text-white"><i class="fa-solid fa-hand-point-left fa-shake" style="color: #ffffff;"></i></a>
             @endif
         </td>
     </tr>

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <center><h1>Tutti gli articoli</h1></center>
+                <h1 class="d-flex justify-content-center mb-2 align-items-center text-uppercase fw-bold">Tutti gli articoli</h1>
             </div>
         </div>
     </div>

@@ -10,10 +10,10 @@
       <img class="banner-img" src='{{Storage::url($article->image)}}' alt=''>    
     </div>
     <div class="card-body">
-      <a href="{{route('article.show', compact('article'))}}"><h3 class="blog-title ">{{$article->title}}</h3></a>
+      <a href="{{route('article.show', compact('article'))}}"><h3 class="blog-title">{{$article->title}}</h3></a>
       <a href="{{route('article.show', compact('article'))}}"><h5 class="blog-description display-3 fw-bold border-top border-bottom border-dark py-2"> {{$article->subtitle}}</h5></a>
       <a href="{{route('article.show', compact('article'))}}"><p class="blog-description trunc-body display-5">{{$article->body}}</p></a>
-      <p class="small fst-italic text-capitalize">
+      <p class="small fst-italic text-capitalize">Tags: 
         @foreach($article->tags as $tag)
           #{{$tag->name}}
         @endforeach
@@ -27,7 +27,7 @@
           <h3 class="profile-name">Redatto il: {{$article->created_at->format('d/m/Y')}} </h3> 
         </div>
         <div class="col-6 col-md-12 d-flex justify-content-start align-items-start">
-          <h3 class="profile-name">Da: <a class="fw-bold text-capitalize"  href="{{route('filter.user', ['user' =>$article->user->id])}}">{{$article->user->name}}</a></h3>
+          <h3 class="profile-name fst-italic">Di: <a class="fw-bold text-capitalize"  href="{{route('filter.user', ['user' =>$article->user->id])}}">{{$article->user->name}}</a></h3>
         </div>
         </div>
       </div>

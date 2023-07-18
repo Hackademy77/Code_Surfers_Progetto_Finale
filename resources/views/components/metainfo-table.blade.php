@@ -2,7 +2,7 @@
     <thead class="table-dark">
         <tr>
             <th scope='col'>#</th>
-            <th scope='col'>Nome tag</th>
+            <th scope='col'>Nome</th>
             <th scope='col'>Nr. Articoli</th>
             <th scope='col'>Aggiorna</th>
             <th scope='col'>Cancella</th>
@@ -12,7 +12,7 @@
         @foreach ($metaInfos as $metaInfo)
         <tr>
             <th scope='row'>{{$metaInfo->id}}</th>
-            <td>{{Str::limit($metaInfo->name, 6)}}</td>
+            <td>{{($metaInfo->name)}}</td>
             <td>{{count($metaInfo->articles)}}</td>
             @if($metaType == "tags")
             <td>

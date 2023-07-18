@@ -1,4 +1,9 @@
 <x-layout>
+	<style>
+		#overflow-card{
+			overflow-x: hidden;
+		}
+	</style>
 	<section id="home" class="hero-area bg_cover">
 		<div class="container">
 			<div class="row">
@@ -24,7 +29,7 @@
 			<div class="search-wrapper">
 				<form action="{{route('article.search')}}" method="GET">
 					<div class="row justify-content-center mb-2">
-						<center><h2>Cerca articoli...</h2></center>
+						<h2 class="d-flex justify-content-center mb-2 align-items-center">Cerca articoli...</h2>
 						<div class="col-lg-3 col-sm-5 col-10">
 							<div class="search-input">
 								<input type="search" name="query" aria-label="Search" id="keyword" placeholder="Cerca...">
@@ -40,11 +45,11 @@
 			</div>
 		</div>
 	</div>
-	<center><h2 class="mt-5">ULTIMI ARTICOLI <i class="fa-solid fa-fire-flame-curved fa-fade" style="color: #ff6b6b;"></i></h2></center>
+	<h2 class="mt-5 d-flex justify-content-center">ULTIMI ARTICOLI &nbsp;<i class="fa-solid fa-fire-flame-curved fa-fade" style="color: #ff6b6b;"></i></h2>
 	<div class="container mt-5">
 		<div class="row">
 			@foreach ($articles as $article)
-			<div class="col-12 col-lg-4 col-md-3 justify-content-center d-flex">
+			<div class="col-12 col-lg-4 col-md-3 justify-content-center d-flex" id="overflow-card">
 				<x-card 
 				:article="$article"
 				/>
