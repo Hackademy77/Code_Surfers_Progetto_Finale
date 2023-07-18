@@ -2,14 +2,22 @@
 <div class="wrapper">
   <div class="card">
     <div class="card-banner">
+      @if($article->category)
       <p class="category-tag popular"><a class="text-light fw-bold" href="{{route('filter.category', ['category' =>$article->category->id])}}">{{$article->category->name}}</a></p>
-      <img class="banner-img" src='{{Storage::url($article->image)}}' alt=''></a>
-      
+      @else
+      <p class="category-tag popular">Senza categoria</p>
+      @endif
+      <img class="banner-img" src='{{Storage::url($article->image)}}' alt=''>    
     </div>
     <div class="card-body">
       <a href="{{route('article.show', compact('article'))}}"><h3 class="blog-title ">{{$article->title}}</h3></a>
       <a href="{{route('article.show', compact('article'))}}"><h5 class="blog-description display-3 fw-bold border-top border-bottom border-dark py-2"> {{$article->subtitle}}</h5></a>
       <a href="{{route('article.show', compact('article'))}}"><p class="blog-description trunc-body display-5">{{$article->body}}</p></a>
+      <p class="small fst-italic text-capitalize">
+        @foreach($article->tags as $tag)
+          #{{$tag->name}}
+        @endforeach
+      </p>
       <a href="{{route('article.show', compact('article'))}}" class="text-touppercase mt-2 text-dark fw-bold">Continua a leggere...</a>
       <div class="card-profile">
         <img class="profile-img" src='https://images.unsplash.com/photo-1554780336-390462301acf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>

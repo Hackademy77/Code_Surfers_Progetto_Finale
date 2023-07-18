@@ -1,4 +1,9 @@
 <x-layout>
+	<style>
+		body{
+			overflow-x: hidden;
+		}
+	</style>
     <div class="margin-custom mb-5">
 			<div class="row">
 				<div class="col-12 d-flex justify-content-center align-items-center">

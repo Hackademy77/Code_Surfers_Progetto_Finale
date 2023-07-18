@@ -35,6 +35,11 @@
                             <input type="file"  name="image" class="form-control border">
                         </div>
                         <div class="form-group mb-3">
+                            <p>Tags</p>
+                            <input name="tags" id="tags" class="form-control border" value="{{old('tags')}}">
+                            <span class="fst-italic">Dividi ogni tag con una virgola</span>
+                        </div>
+                        <div class="form-group mb-3">
                             <p>Scegli la categoria:</p>
                             <select name="category" class="form-select border ">
                                 @foreach ($categories as $category)

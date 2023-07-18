@@ -13,6 +13,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #7C869A;
+  overflow-x: hidden;
 }
 .margin-custom {
   margin-top: 120px;
@@ -1176,13 +1177,13 @@ textarea:focus {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .sticky .navbar {
-    padding: 10px 0;
+    padding: 0 0;
   }
 }
 
 @media (max-width: 767px) {
   .sticky .navbar {
-    padding: 10px 0;
+    padding: 15px 0;
   }
 }
 
@@ -1198,7 +1199,7 @@ textarea:focus {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 300px) {
   .navbar {
     padding: 15px 0;
   }
@@ -1206,12 +1207,12 @@ textarea:focus {
 
 .navbar-brand {
   padding: 0;
-  width: 100%;
-  max-width: 155px;
+  width: 70%;
+  max-width: 110px;
 }
 
 .navbar-brand img {
-  width: 150px;
+  width: 80px;
 }
 
 .navbar-toggler {
@@ -1221,14 +1222,14 @@ textarea:focus {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .navbar-toggler {
     position: absolute;
-    right: 0;
+    right: 15px;
   }
 }
 
 @media (max-width: 767px) {
   .navbar-toggler {
     position: absolute;
-    right: 0;
+    right: 22px;
   }
 }
 
@@ -1678,7 +1679,7 @@ textarea:focus {
 
 @media (max-width: 767px) {
   .header-btn .main-btn.account-btn {
-    padding: 10px 14px;
+    padding: 10px 15px;
   }
 }
 

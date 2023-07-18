@@ -4,7 +4,7 @@
       <div class="row align-items-center">
         <div class="col-xl-12">
           <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand mx-0" href="/">
               <img id="logo" class="img-fluid w-25" src="https://th.bing.com/th/id/OIP.5EBcdJl3ADM-KQyAn25JaQHaH3?pid=ImgDet&rs=1" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,6 +15,7 @@
                 <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == 'homepage') active @endif" href="/">HOME</a>
                 </li>
+                
                 {{-- <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == '#') active @endif" data-toggle="collapse" data-target="#sub-nav1" aria-controls="sub-nav1"
                     aria-expanded="false" aria-label="Toggle navigation" href="javascript:void(0)">CHI SIAMO
@@ -48,18 +49,18 @@
                   <ul class="dropdown-menu">
                   @foreach ($categories as $category)
                   <li ><a class="dropdown-item text-capitalize" href="{{route('filter.category', compact('category'))}}">{{$category->name}}</a></li>
-                  @endforeach                
+                  @endforeach
                   </ul>
                 </div>
-               
               </ul>
             </div>
-            <ul class="header-btn d-md-flex">
+            
+            <ul class="header-btn d-flex justify-content-between">
               @if (Auth::user() != null)
               <li>
-                <a href="#" class="main-btn account-btn">
-                  <i class="fa-regular fa-user"></i>
-                  <span class="d-none d-md-block">{{ Auth::user()->name }}</span>
+                <a href="#" class="main-btn account-btn mt-2">
+                  <i class="fa-regular fa-user ms-md-2 d-block d-md-none"></i>
+                  <span class="d-none d-md-block">{{ Auth::user()->name }}<i class="fa-regular fa-user ms-2"></i></span>
                 </a>
                 <ul class="dropdown-nav">
                   <li><a href="#" class="fw-bold">I MIEI ANNUNCI</a></li>
@@ -70,11 +71,15 @@
                 </ul>
               </li>
               @else
-              <a href="{{ route('login') }}"  class=" main-btn btn-hover d-none d-md-block fw-bold m-3 mx-2">ACCEDI &nbsp; <i class="fa-solid fa-user"></i></a>
+              <a href="{{route('login')}}" class="main-btn btn-hover fw-bold m-2 mx-5">
+                <i class="fa-solid fa-user ms-md-2 d-block d-md-none" style="color: #ffffff;"></i>
+                <p class="d-none text-light d-md-block">ACCEDI<i class="fa-solid fa-user ms-md-2" style="color: #ffffff;"></i></p></a>
               @endif
               @auth
               <li>
-                <a href="{{route('careers')}}" class="main-btn btn-hover d-none d-md-block fw-bold mt-3">LAVORA CON NOI &nbsp; <i class="fa-solid fa-briefcase"></i></a>
+                <a href="{{route('careers')}}" class="main-btn btn-hover fw-bold mt-2 me-5">
+                  <i class="fa-solid fa-briefcase ms-md-2 d-block d-md-none" style="color: #ffffff;"></i>
+                  <p class="d-none text-light d-md-block">LAVORA CON NOI<i class="fa-solid fa-briefcase ms-md-2" style="color: #ffffff;"></i></p></a>
               </li>
               @endauth
             </ul>
