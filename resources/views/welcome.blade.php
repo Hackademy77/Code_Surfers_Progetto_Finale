@@ -8,7 +8,7 @@
 						<h1 class="mb-30 wow fadeInUp text-capitalize" data-wow-delay=".2s">Bentornato: {{ Auth::user()->name }}</h1>
 						<p class="wow fadeInUp" data-wow-delay=".4s">inserisci un articolo dal bottone qua sotto </p></br>
 						@else
-						<h1 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Benvenuto su Post#2</h1>
+						<h1 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Benvenuto su The Aulab Post</h1>
 						<p class="wow fadeInUp" data-wow-delay=".4s">Politica,economia,sport...</p></br>
 						@endif
 						@auth

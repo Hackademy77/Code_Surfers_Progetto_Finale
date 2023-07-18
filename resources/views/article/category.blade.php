@@ -2,7 +2,7 @@
     <div class="margin-custom mb-5">
 			<div class="row">
 				<div class="col-12 d-flex justify-content-center align-items-center">
-					<h1 class="display-2">{{$category->name}}</h1>
+					<h1 class="display-2 text-capitalize title-bycat" id="h1-category">{{$category->name}}</h1>
 				</div>
 			</div>
 	</div>

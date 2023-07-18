@@ -2,8 +2,8 @@
     <div class="margin-custom"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1 class="display-2 d-flex justify-content-center">Autore: {{$user->name}}</h1>
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <h1 class="display-2 text-capitalize title-bycat" id="h1-user">{{$user->name}}</h1>
             </div>
         </div>
     </div>

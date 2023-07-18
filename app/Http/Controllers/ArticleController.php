@@ -49,7 +49,7 @@ class ArticleController extends Controller
             'user_id' => Auth::user()->id,
         ]);
 
-            return redirect(route('homepage'))->with('message','Articolo creato correttamente');
+            return redirect(route('homepage'))->with('messaggio','Articolo creato correttamente');
     }
 
     /**
@@ -60,7 +60,7 @@ class ArticleController extends Controller
         return view('article.show', compact('article'));
     }
     public function __construct(){
-        $this->middleware('auth')->except('index','show');
+        $this->middleware('auth')->except('index','show','filterCat','filterAuth','articleSearch');
     }
 
     public function filterCat(Category $category){
@@ -75,7 +75,7 @@ class ArticleController extends Controller
     });
         return view('article.user', compact('user', 'articles'));
     }
-    
+
     public function articleSearch(Request $request){
         $query = $request->input('query');
         $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();

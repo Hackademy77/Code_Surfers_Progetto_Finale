@@ -1,5 +1,4 @@
-
-<table class="table table-striped table-hover border">
+<table class="table table-striped table-hover border table-responsive">
     <thead class="table-dark">
         <tr>
             <th scope='col'>#</th>
@@ -13,14 +12,14 @@
         @foreach ($articles as $article)
         <tr>
             <th scope='row'>{{$article->id}}</th>
-            <td>{{$article->title}}</td>
-            <td>{{$article->subtitle}}</td>
-            <td>{{$article->user->name}}</td>
+            <td>{{Str::limit($article->title, 8)}}</td>
+            <td>{{Str::limit($article->subtitle, 8)}}</td>
+            <td>{{Str::limit($article->user->name, 5)}}</td>
         <td>
             @if (is_null($article->is_accepted))
-            <a href="{{ route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi l'articolo</a>
+            <a href="{{ route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
                 @else
-            <a href="{{ route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white">Riporta in revisione</a>
+            <a href="{{ route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white">Revisiona</a>
             @endif
         </td>
     </tr>
