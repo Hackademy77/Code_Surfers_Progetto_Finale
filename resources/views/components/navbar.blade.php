@@ -43,6 +43,13 @@
                   </a>
                 </li>
                 @endif
+                @if (Auth::user()->is_writer)
+                <li class="nav-item">
+                  <a class="page-scroll @if(Route::currentRouteName() == 'writer.dashboard') active @endif" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
+                    aria-expanded="false" aria-label="Toggle navigation" href="{{route('writer.dashboard')}}">DASH WRT
+                  </a>
+                </li>
+                @endif
                 @endauth
                 <div class="dropdown">
                   <li class="dropdown-toggle cursor-custom" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>

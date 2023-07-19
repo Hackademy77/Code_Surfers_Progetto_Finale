@@ -235,6 +235,23 @@ textarea:focus {
   background: #FF6B6B;
   transition: all 0.4s ease-out 0s;
 }
+.main-btn-button {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 0;
+  /* padding: 16pxpx; */
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  background: #FF6B6B;
+  transition: all 0.4s ease-out 0s;
+}
 
 .main-btn:hover {
   color: #fff;
@@ -2150,7 +2167,7 @@ textarea:focus {
 }
 
 .message-create-dashboard{
-  background-color: #FF6B6B;
+  background-color: green;
   color: white;
   margin-bottom: 0px;
 }

@@ -37,7 +37,7 @@
 						</div>
 						<div class="col-lg-2 col-sm-5 col-10">
 							<div class="search-btn">
-								<button class="main-btn btn-hover" type="submit">Ricerca<i class="fa-brands fa-searchengin fa-beat" style="color: #ffffff;"></i></button>
+								<button class="main-btn-button btn-hover" type="submit">Ricerca<i class="fa-brands fa-searchengin fa-beat" style="color: #ffffff;"></i></button>
 							</div>
 						</div>
 					</div>

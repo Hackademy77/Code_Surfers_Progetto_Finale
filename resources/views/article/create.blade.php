@@ -15,7 +15,7 @@
             <div class="col-md-3"></div>
 
             <div class="col-12 col-md-6">
-                <div class="registration-form data-aos="fade-up">
+                <div class="registration-form">
                     <form  action="{{ route('article.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
@@ -32,11 +32,11 @@
                         </div>
                         <div class="">
                             <p class="">Inserisci immagine:</p>
-                            <input type="file"  name="image" class="form-control border">
+                            <input type="file"  name="image" class="form-control border  @error('image') is-invalid @enderror">
                         </div>
                         <div class="form-group mb-3">
                             <p>Tags</p>
-                            <input name="tags" id="tags" class="form-control border" value="{{old('tags')}}">
+                            <input name="tags" id="tags" class="form-control border  @error('tags') is-invalid @enderror" value="{{old('tags')}}">
                             <span class="fst-italic">Dividi ogni tag con una virgola</span>
                         </div>
                         <div class="form-group mb-3">
@@ -48,7 +48,7 @@
                             </select>
                         </div>
                         <div class="form-group mt-4">
-                            <textarea placeholder="Inserisci il corpo del testo..." name="body" cols="30" rows="7" class="form-control border">{{old('body')}}</textarea>
+                            <textarea placeholder="Inserisci il corpo del testo..." name="body" cols="30" rows="7" class="form-control border  @error('body') is-invalid @enderror">{{old('body')}}</textarea>
                         </div>
                         <div class="form-group d-flex justify-content-center">
                             <button type="submit" class="main-btn text-white text-uppercase">Inserisci articolo</button>
