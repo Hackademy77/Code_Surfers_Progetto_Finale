@@ -79,7 +79,7 @@ class AdminController extends Controller
 
         $category->delete();
 
-        return redirect(route('admin.dashboard'))->with('messaggio', 'Categoria eliminato');
+        return redirect(route('admin.dashboard'))->with('messagge-red', 'Categoria eliminato');
 
     }
     

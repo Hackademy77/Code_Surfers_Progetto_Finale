@@ -1,14 +1,20 @@
 <x-layout>
-    <div class="margin-admin"></div>
-    <div class="container-fluid pt-5 bg-info text-center text-white mt-5 background-dash">
+    <div class="container-fluid pt-4 bg-info text-center text-white mt-5 background-dash">
         <div class="row justify-content-center">
-            <h1 class="display-3 fw-bold">Bentornato, nella dashboard dell' Amministratore</h1>
+            <h1 class="display-3 m-5 fw-bold">Bentornato, Amministratore</h1>
         </div>
     </div>
 
+    {{-- VERDE  --}}
  @if (session('messaggio'))
-        <div class="alert message-create-dashboard text-center">
+        <div class="alert alert-success text-center">
             {{session('messaggio')}}
+        </div>
+    @endif
+{{-- ROSSO --}}
+@if (session('messagge-red'))
+        <div class="alert alert-danger text-center fw-bold">
+            {{session('messagge-red')}}
         </div>
     @endif
 

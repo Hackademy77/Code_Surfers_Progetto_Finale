@@ -54,6 +54,7 @@
                             <div class="app-title">
                                 <span>CONTATTACI</span>
                             </div>
+                            <img src="public/img/Business deal-bro.svg" class="img-fluid" width="100%" alt="">
                         </div>
                         <div class="screen-body-item">
                             <form action="{{route('careers.submit')}}" method="post" enctype= "multipart/form-data">

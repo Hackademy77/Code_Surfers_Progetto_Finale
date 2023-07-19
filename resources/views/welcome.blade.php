@@ -1,7 +1,7 @@
 <x-layout>
 	<style>
 		#overflow-card{
-			overflow-x: hidden;
+			overflow: hidden;
 		}
 	</style>
 	<section id="home" class="hero-area bg_cover">
@@ -14,7 +14,7 @@
 						<p class="wow fadeInUp" data-wow-delay=".4s">inserisci un articolo dal bottone qua sotto </p></br>
 						@else
 						<h1 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Benvenuto su The Aulab Post</h1>
-						<p class="wow fadeInUp" data-wow-delay=".4s">Politica,economia,sport...</p></br>
+						<p class="wow fadeInUp" data-wow-delay=".4s">Politica, economia, sport...</p></br>
 						@endif
 						@auth
 						<a href="{{ route('article.create') }}" rel="nofollow" class="main-btn btn-hover">INSERISCI UN ARTICOLO</a>

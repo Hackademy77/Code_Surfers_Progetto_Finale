@@ -30,7 +30,7 @@
                 @if (Auth::user()->is_admin)
                 <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == 'admin.dashboard') active @endif" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
-                    aria-expanded="false" aria-label="Toggle navigation" href="{{route('admin.dashboard')}}">ADM
+                    aria-expanded="false" aria-label="Toggle navigation" href="{{route('admin.dashboard')}}">DASH ADM
                   </a>
                 </li>
                 @endif
@@ -39,7 +39,7 @@
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == 'revisor.dashboard') active @endif" data-toggle="collapse" data-target="#sub-nav" aria-controls="sub-nav"
-                    aria-expanded="false" aria-label="Toggle navigation" href="{{route('revisor.dashboard')}}">REV
+                    aria-expanded="false" aria-label="Toggle navigation" href="{{route('revisor.dashboard')}}">DASH REV
                   </a>
                 </li>
                 @endif
@@ -76,11 +76,15 @@
                 <p class="d-none text-light d-md-block">ACCEDI<i class="fa-solid fa-user ms-md-2" style="color: #ffffff;"></i></p></a>
               @endif
               @auth
+              @if (Auth::user()->is_admin)
+
+              @else
               <li>
                 <a href="{{route('careers')}}" class="main-btn btn-hover fw-bold mt-2 me-5">
                   <i class="fa-solid fa-briefcase ms-md-2 d-block d-md-none" style="color: #ffffff;"></i>
                   <p class="d-none text-light d-md-block">LAVORA CON NOI<i class="fa-solid fa-briefcase ms-md-2" style="color: #ffffff;"></i></p></a>
               </li>
+              @endif
               @endauth
             </ul>
           </nav> <!-- navbar -->
