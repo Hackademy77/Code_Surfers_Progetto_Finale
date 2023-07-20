@@ -10,7 +10,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse sub-menu-bar ms-5" id="navbarSupportedContent">
               <ul id="nav" class="navbar-nav">
                 <li class="nav-item">
                   <a class="page-scroll @if(Route::currentRouteName() == 'homepage') active @endif" href="/">HOME</a>
@@ -55,17 +55,17 @@
                   <li class="dropdown-toggle cursor-custom" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
                   <ul class="dropdown-menu">
                   @foreach ($categories as $category)
-                  <li ><a class="dropdown-item text-uppercase link-hover" href="{{route('filter.category', compact('category'))}}">{{$category->name}}</a></li>
+                  <li class="link-hover"><a class="dropdown-item text-uppercase " href="{{route('filter.category', compact('category'))}}">{{$category->name}}</a></li>
                   @endforeach
                   </ul>
                 </div>
               </ul>
             </div>
             
-            <ul class="header-btn d-flex justify-content-between">
+            <ul class="header-btn d-flex justify-content-between ms-lg-5 margin-navbar">
               @if (Auth::user() != null)
               <li>
-                <a href="#" class="main-btn account-btn mt-2">
+                <a href="#" class="main-btn account-btn mt-lg-1">
                   <i class="fa-regular fa-user ms-md-2 d-block d-md-none"></i>
                   <span class="d-none d-md-block">{{ Auth::user()->name }}<i class="fa-regular fa-user ms-2"></i></span>
                 </a>
