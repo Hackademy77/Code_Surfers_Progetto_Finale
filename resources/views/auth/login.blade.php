@@ -9,7 +9,7 @@
                         @csrf
                         <label for="chk" aria-hidden="true">Registrati</label>
                         <input id="input" class="@error('name') is-invalid @enderror" type="text" name="name" placeholder="User name">
-                        <input id="input" type="email" name="email" placeholder="Email">
+                        <input id="input" type="email" name="email" placeholder="Email" >
                         <input id="input" type="password" name="password" placeholder="Password">
                         <input id="input" type="password" name="password_confirmation" placeholder="Conferma password">
                         <button id="button">Registrati</button>
@@ -20,7 +20,7 @@
                     <form action="{{ route('login') }}" method="POST">
                         @csrf
                         <label for="chk" aria-hidden="true">Login</label>
-                        <input id="input" type="email" name="email" placeholder="Email" required="">
+                        <input id="input" type="email" name="email" placeholder="Email">
                         <input id="input" type="password" name="password" placeholder="Password" required="">
                         <button class="" id="button">Login</button>
                     </form>

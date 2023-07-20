@@ -30,7 +30,7 @@
         </div>
         </div>
       </div>
-      <span class="text-muted fst-italic">Tempo di lettura stimato: {{$article->readDuration()}} min</span>
+      <span class="text-muted fst-italic mt-3"><i class="fa-solid fa-clock fa-spin"></i>  Tempo di lettura: {{$article->readDuration()}} min</span>
     </div>
   </div>
 </div>

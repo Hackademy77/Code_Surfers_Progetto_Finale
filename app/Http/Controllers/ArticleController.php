@@ -111,12 +111,12 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     {
         $request->validate([
-            'title' => 'required|min:5|unique:article,title,' . $article->id,
-            'subtitle' => 'required|min:5|unique:article,subtitle,' . $article->id,
+            'title' => 'required|min:2|unique:article,title,' . $article->id,
+            'subtitle' => 'required|min:2|unique:article,subtitle,' . $article->id,
             'image' => 'image',
             'category' => 'required',
             'tags' => 'required',
-            'body' => 'required|min:10',
+            'body' => 'required|min:5',
         ]);
         $article->update([
             'title' => $request->title,
@@ -142,7 +142,7 @@ class ArticleController extends Controller
             $newTags[] = $newTag->id;
         }
         $article->tags()->sync($newTags);
-        return view(route('writer.dashboard'))->with('message', 'Hai aggiornato correttamente l\'articolo');
+        return redirect(route('writer.dashboard'))->with('message-green', 'Hai aggiornato correttamente l\'articolo');
     }
 
     /**
@@ -154,7 +154,7 @@ class ArticleController extends Controller
             $article->tags()->detach($tag);
         }
         $article->delete();
-        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente eliminato l\'articolo');
+        return redirect(route('writer.dashboard'))->with('message-red', 'Hai correttamente eliminato l\'articolo');
     }
 
 }

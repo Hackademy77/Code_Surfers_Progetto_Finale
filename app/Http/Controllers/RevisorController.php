@@ -20,7 +20,7 @@ class RevisorController extends Controller
             'is_accepted' => true,
         ]);
   
-    return redirect(route('revisor.dashboard'))->with('messaggio','Articolo accettato');
+    return redirect(route('revisor.dashboard'))->with('message-green','Articolo accettato');
   }
 
   public function rejectArticle(Article $article){
@@ -28,7 +28,7 @@ class RevisorController extends Controller
         'is_accepted' => false,
     ]);
 
-return redirect(route('revisor.dashboard'))->with('messaggio','Articolo rifiutato');
+return redirect(route('revisor.dashboard'))->with('message-red','Articolo rifiutato');
 }
 
 public function undoArticle(Article $article){
@@ -36,7 +36,7 @@ public function undoArticle(Article $article){
         'is_accepted' => NULL,
     ]);
 
-return redirect(route('revisor.dashboard'))->with('messaggio','Articolo da rivedere');
+return redirect(route('revisor.dashboard'))->with('message-warning','Articolo da rivedere');
 }
 
 }

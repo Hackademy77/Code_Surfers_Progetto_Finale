@@ -70,7 +70,7 @@
                   <span class="d-none d-md-block">{{ Auth::user()->name }}<i class="fa-regular fa-user ms-2"></i></span>
                 </a>
                 <ul class="dropdown-nav">
-                  <li><a href="#" class="fw-bold">I MIEI ANNUNCI</a></li>
+                  {{-- <li><a href="#" class="fw-bold">I MIEI ANNUNCI</a></li> --}}
                   <form action="{{ route('logout') }}" method="POST">
                     @csrf
                   <li><button type="submit" class="btn fw-bold  hover-log-custom">LOGOUT  <i class="fa-solid fa-right-from-bracket"> </i></button></li>
@@ -78,7 +78,7 @@
                 </ul>
               </li>
               @else
-              <a href="{{route('login')}}" class="main-btn btn-hover fw-bold m-2 mx-5">
+              <a href="{{route('login')}}" class="main-btn btn-hover fw-bold m-2 mx-md-5 me-3">
                 <i class="fa-solid fa-user ms-md-2 d-block d-md-none" style="color: #ffffff;"></i>
                 <p class="d-none text-light d-md-block">ACCEDI<i class="fa-solid fa-user ms-md-2" style="color: #ffffff;"></i></p></a>
               @endif

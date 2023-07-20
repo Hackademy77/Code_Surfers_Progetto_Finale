@@ -17,8 +17,9 @@
             </div>
             @endif
             <div class="registration-form">
-                <form  action="{{ route('article.store')}}" method="POST" enctype="multipart/form-data">
+                <form  action="{{ route('article.update', $article)}}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
                     <div class="form-group">
                         <input class="form-control item border"  type="text" value="{{$article->title}}" name="title" id="username" placeholder="Titolo" required>
                     </div>

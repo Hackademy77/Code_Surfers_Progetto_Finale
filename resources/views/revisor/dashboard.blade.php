@@ -4,11 +4,22 @@
             <h1 class="display-3 m-5 fw-bold text-capitalize">Bentornato, {{ Auth::user()->name }}</h1>
         </div>
     </div>
-    @if (session('messaggio'))
-        <div class="alert message-create-dashboard text-center">
-            {{session('messaggio')}}
+    @if (session('message-green'))
+        <div class="alert alert-success text-center">
+            {{session('message-green')}} <i class="fa-solid fa-check"></i>
         </div>
     @endif
+    @if (session('message-warning'))
+    <div class="alert alert-warning text-center">
+        {{session('message-warning')}} <i class="fa-regular fa-eye"></i>
+    </div>
+@endif
+    @if (session('message-red'))
+    <div class="alert alert-danger text-center">
+        {{session('message-red')}} <i class="fa-solid fa-file-circle-xmark"></i>
+    </div>
+@endif
+
 
     <div class="container my-5">
         <div class="row justify-content-md-start">

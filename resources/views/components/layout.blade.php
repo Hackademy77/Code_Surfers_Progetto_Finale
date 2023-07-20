@@ -27,8 +27,12 @@
     <div class="vh-50">
         {{ $slot }}
     </div>
- 
+    @if(Route::currentRouteName() != 'login')
     <x-footer /> 
+    @else
+    
+    @endif
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js%22%3E</script>
 </body>
 </html>

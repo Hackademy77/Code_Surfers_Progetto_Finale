@@ -2225,3 +2225,38 @@ textarea:focus {
 .link-hover:hover a {
     color: #FF6B6B;
 }
+
+.nav-link {
+  color: #FF6B6B;
+}
+
+#link-footer {
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+}
+
+#link-footer::before {
+  content: '';
+  background-color: #ff6b6b;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 3px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+#link-footer:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+#overflow-card{
+  overflow: hidden;
+}
+
+#margin-mail{
+  margin-top: 100px;
+}

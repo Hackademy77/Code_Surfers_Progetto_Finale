@@ -54,7 +54,7 @@
                             <div class="app-title">
                                 <span>CONTATTACI</span>
                             </div>
-                            <img src="public/img/Business deal-bro.svg" class="img-fluid" width="100%" alt="">
+                            <img src="/img/we-are-hiring-2161926-1816232-removebg-preview.png" class="img-fluid" width="100%" id="margin-mail" alt="">
                         </div>
                         <div class="screen-body-item">
                             <form action="{{route('careers.submit')}}" method="post" enctype= "multipart/form-data">
@@ -75,7 +75,7 @@
                                         <textarea name="message" id="message" cols="30" rows="7" placeholder="Messaggio" class="app-form-control">{{old('message')}}</textarea>
                                     </div>
                                     <div class="app-form-group buttons">
-                                        <button class="app-form-button button-mail fs-5" type="submit">INVIA</button>
+                                        <button class="app-form-button button-mail fs-5" type="submit">INVIA  <i class="fa-solid fa-envelope"></i></button>
                                     </div>
                                 </div>
                             </form>

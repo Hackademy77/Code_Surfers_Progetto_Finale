@@ -20,11 +20,21 @@ class PublicController extends Controller
     // }
 
     public function careers(){
-        return view('careers');
+
+        if (Auth::user()->is_admin) {
+            return redirect(route('homepage'))->with('message', 'Non puoi accedere!');
+        } else{
+            return view('careers');
+        }
        
     }
 
     public function careersSubmit(Request $request){
+
+        if (Auth::user()->is_admin) {
+            return redirect(route('homepage'))->with('message', 'Non puoi accedere!');
+        } else {
+        
         $request->validate([
             'role' => 'required',
             'email' => 'required|email',
@@ -50,9 +60,10 @@ class PublicController extends Controller
             break;
 
         }
-
         $user->update();
         return redirect(route('homepage'))->with('message', 'Grazie per averci contattato, la ricontatteremo presto.');
     }
+     
+}
 
 }
