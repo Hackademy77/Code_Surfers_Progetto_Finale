@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid pt-4 bg-info text-center text-white mt-5 background-dash">
         <div class="row justify-content-center">
-            <h1 class="display-3 m-5 fw-bold">Bentornato, nella dashboard del Revisore</h1>
+            <h1 class="display-3 m-5 fw-bold text-capitalize">Bentornato, {{ Auth::user()->name }}</h1>
         </div>
     </div>
     @if (session('messaggio'))

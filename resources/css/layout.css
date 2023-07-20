@@ -2205,3 +2205,23 @@ textarea:focus {
   background: rgba(238,111,87,0.5);
   z-index: -1;
 }
+
+.button-adm {
+  height: 38px;
+}
+
+.search-adm {
+  width: 390px;
+}
+.shadow-dash{
+  box-shadow: -1px 75px 166px -20px rgba(36,36,36,0.97);
+  -webkit-box-shadow: -1px 75px 166px -20px rgba(36,36,36,0.97);
+  -moz-box-shadow: -1px 75px 166px -20px rgba(36,36,36,0.97);
+}
+
+.color-dash {
+  background-color: #353535;
+}
+.link-hover:hover a {
+    color: #FF6B6B;
+}

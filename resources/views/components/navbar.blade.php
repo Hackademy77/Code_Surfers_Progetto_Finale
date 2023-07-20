@@ -4,8 +4,8 @@
       <div class="row align-items-center">
         <div class="col-xl-12">
           <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand mx-0" href="/">
-              <img id="logo" class="img-fluid w-25" src="https://th.bing.com/th/id/OIP.5EBcdJl3ADM-KQyAn25JaQHaH3?pid=ImgDet&rs=1" alt="Logo">
+            <a class=" mx-0" href="/">
+              <img id="logo" class="img-fluid" src="/img/logo.png" alt="Logo" width="170px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,7 @@
                   <li class="dropdown-toggle cursor-custom" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
                   <ul class="dropdown-menu">
                   @foreach ($categories as $category)
-                  <li ><a class="dropdown-item text-capitalize" href="{{route('filter.category', compact('category'))}}">{{$category->name}}</a></li>
+                  <li ><a class="dropdown-item text-uppercase link-hover" href="{{route('filter.category', compact('category'))}}">{{$category->name}}</a></li>
                   @endforeach
                   </ul>
                 </div>

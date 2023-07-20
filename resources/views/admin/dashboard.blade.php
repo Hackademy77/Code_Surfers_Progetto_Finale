@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container-fluid pt-4 bg-info text-center text-white mt-5 background-dash">
+    <div class="container-fluid pt-4 color-dash text-center mt-5 background-dash shadow-dash">
         <div class="row justify-content-center">
-            <h1 class="display-3 m-5 fw-bold">Bentornato, Amministratore</h1>
+            <h1 class="display-3 m-5 fw-bold col-12 text-light text-capitalize">Bentornato, {{ Auth::user()->name }}</h1>
         </div>
     </div>
 
@@ -26,8 +26,8 @@
                 <x-metainfo-table :metaInfos="$categories" metaType="categorie" />
                 <form class="d-flex" action="{{route('admin.storeCategory')}}" method="POST">
                 @csrf
-                <input type="text" name="name" class="form-control me-2" placeholder="Inserisci Cat." id="">
-                <button type="submit" class="btn btn-success text-white fw-bold text-uppercase">Aggiungi </button>
+                <input type="text" name="name" class="form-control me-2 search-adm" placeholder="Inserisci Categoria" id="">
+                <button type="submit" class="btn btn-success text-white text-uppercase button-adm">Aggiungi </button>
                 </form>
             </div>
         </div>

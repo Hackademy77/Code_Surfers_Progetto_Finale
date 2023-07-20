@@ -35,7 +35,7 @@ class Article extends Model
     }
     public function readDuration(){
         $totalWords = str_word_count($this->body);
-        $minutesToRead = round($totalWords / 200);
+        $minutesToRead = round($totalWords / 100);
 
         return intval($minutesToRead);
     }

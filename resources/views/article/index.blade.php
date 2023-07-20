@@ -11,7 +11,7 @@
 	<div class="container mt-5">
 		<div class="row">
 			@foreach ($articles as $article)
-			<div class="col-12 col-lg-4 col-md-3 justify-content-center d-flex">
+			<div class="col-12 col-lg-4 col-md-6 justify-content-center d-flex">
 				<x-card 
 				:article="$article"
 				/>

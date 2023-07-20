@@ -35,7 +35,7 @@
                 <form action="{{route('admin.editCategory', ['category' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('put')
-                    <input type="text" name="name" placeholder="Nuova cat." class="form-control w-50 d-inline">
+                    <input type="text" name="name" placeholder="Nuova categoria" class="form-control w-50 d-inline">
                     <button type="submit" class="btn btn-info text-white fw-bold text-uppercase">Aggiorna <i class="fa-solid fa-arrows-rotate fa-spin" style="color: #ffffff;"></i></button>
                 </form>
             </td>
