@@ -35,14 +35,29 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $request->validate(
+            [
             'title' => 'required|unique:articles|min:15',
             'subtitle' => 'required|unique:articles|min:15',
-            'body' => 'required|min:20',
+            'body' => 'required|min:40',
             'image' => 'image|required',
             'category' => 'required',
             'tags' => 'required',
-        ]);
+            ],
+        [
+            'title.required' => 'Inserire un titolo',
+            'title.unique' => 'Inserire un articolo con un titolo differente',
+            'title.min' => 'Il titolo deve essere almeno 15 caratteri',
+            'subtitle.required' => 'Inserire un sottotitolo',
+            'subtitle.unique' => 'Inserire un articolo con un sottotitolo differente',
+            'subtitle.min' => 'il sottotitolo deve essere almeno 15 caratteri',
+            'body.required' => 'Il corpo del testo è obbligatorio',
+            'body.min' => 'Il corpo del testo deve essere almeno 40 caratteri',
+            'image.required' => 'Inserire immagine',
+            'category.required' => 'Seleziona una categoria',
+            'tags.required' => 'Inserisci almeno un tag',
+        ]
+    );
 
         $article = Article::create([
             'title' => $request->title,
@@ -117,7 +132,8 @@ class ArticleController extends Controller
             'category' => 'required',
             'tags' => 'required',
             'body' => 'required|min:5',
-        ]);
+        ],
+    );
         $article->update([
             'title' => $request->title,
             'subtitle' => $request->subtitle,

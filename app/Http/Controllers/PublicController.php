@@ -39,7 +39,12 @@ class PublicController extends Controller
             'role' => 'required',
             'email' => 'required|email',
             'message' => 'required',
-        ]);
+        ],
+        [
+            'role.required' => 'Seleziona un ruolo',
+            'message.required' => 'Inserisci un messaggio',
+        ]
+    );
 
         $user = Auth::user();
         $role = $request -> role;
@@ -61,7 +66,7 @@ class PublicController extends Controller
 
         }
         $user->update();
-        return redirect(route('homepage'))->with('message', 'Grazie per averci contattato, la ricontatteremo presto.');
+        return redirect(route('homepage'))->with('message-green', 'Grazie per averci contattato, la ricontatteremo presto.');
     }
      
 }

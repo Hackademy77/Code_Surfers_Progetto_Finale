@@ -28,7 +28,7 @@ class WorkMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Curriculum ricevuto',
+            subject: 'Candidatura ricevuta',
         );
     }
 

@@ -20,14 +20,14 @@
                     @csrf
                     @method('put')
                     <input type="text" name="name" placeholder="Nuovo tag" class="form-control w-50 d-inline">
-                    <button type="submit" class="btn btn-info text-white">Aggiorna</button>
+                    <button type="submit" class="btn btn-info text-white fw-bold text-uppercase"> Aggiorna <i class="fa-solid fa-arrows-rotate fa-spin"></i></button>
                 </form>
             </td>
             <td>
                 <form action="{{route('admin.deleteTag', ['tag' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger text-white">Elimina</button>
+                    <button type="submit" class="btn btn-danger text-white fw-bold text-uppercase">Elimina <i class="fa-solid fa-trash-can-arrow-up"></i></button>
                 </form>
             </td>
             @else

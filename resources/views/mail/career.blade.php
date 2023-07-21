@@ -8,6 +8,7 @@
 </head>
 <body>
      
+    <img src="{{ $message->embed(public_path() . '/img/logo.png') }}" width="50%" alt="">
     <h1>Richiesta ricevuta</h1>
     <h4>Richiesta per il ruolo di {{$info['role']}}</h4>
     <p>Ricevuta da {{$info['email']}}</p>

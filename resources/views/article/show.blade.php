@@ -13,10 +13,7 @@
                 <img src="{{Storage::url($article->image)}}" alt="Immagine articolo" width="100%">
             </div>
             <div class="col-12 col-lg-6 col-md-12 justify-content-center align-items-start mt-xs-5 mt-2 mt-lg-5 d-flex flex-column">
-                <h1 class="display-5 fw-semibold text-dark mb-xl-5 mb-2">{{$article->title}}</h1>
-                <div class="d-flex justify-content-end">
-                    <p class="auth-show mt-2">Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('filter.user', ['user' =>$article->user->id])}}" class="text-capitalize details-custom mx-1">{{$article->user->name}}</a></p> 
-                </div>
+                <h1 class="fw-bold display-5 text-dark mb-2">{{$article->title}}</h1>
             </div>
         </div>
     </div>
@@ -25,7 +22,10 @@
             <div class="col-12 col-lg-10 mt-3">
                 <p class="card-text display-5 d-flex justify-content-start text-dark">{{$article->subtitle}}</p>
             </div>
-            <div class="d-flex justify-content-end"><span class="text-muted fst-italic mt-3"><i class="fa-solid fa-clock fa-spin"></i>  Tempo di lettura: {{$article->readDuration()}} min</span></div>
+            <div class="d-flex col-6 mt-2 justify-content-start">
+                <p class="auth-show mt-2">Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('filter.user', ['user' =>$article->user->id])}}" class="text-capitalize details-custom mx-1">{{$article->user->name}}</a></p> 
+            </div>
+            <div class="d-flex col-6 justify-content-end"><span class="text-muted fst-italic mt-3"><i class="fa-solid fa-clock fa-spin"></i>  Tempo di lettura: {{$article->readDuration()}} min</span></div>
             <div class="col-12 border-top border-1 border-dark mt-3 mb-3"></div>
             <div class="col-12 col-lg-10">
                 <p class="text-dark mt-2 text-custom-show d-flex justify-content-start mb-4">{{$article->body}}</p>

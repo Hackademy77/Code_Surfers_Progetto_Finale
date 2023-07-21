@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid pt-4 color-dash text-center mt-5 background-dash shadow-dash">
+    <div class="container-fluid pt-4 color-dash text-center mt-5">
         <div class="row justify-content-center">
             <h1 class="display-3 m-5 fw-bold col-12 text-light text-capitalize">Bentornato, {{ Auth::user()->name }}</h1>
         </div>
@@ -27,7 +27,7 @@
                 <form class="d-flex" action="{{route('admin.storeCategory')}}" method="POST">
                 @csrf
                 <input type="text" name="name" class="form-control me-2 search-adm" placeholder="Inserisci Categoria" id="">
-                <button type="submit" class="btn btn-success text-white text-uppercase button-adm">Aggiungi </button>
+                <button type="submit" class="btn btn-success text-white text-uppercase button-adm"> <i class="fa-solid fa-plus"></i> </button>
                 </form>
             </div>
         </div>

@@ -1,4 +1,9 @@
 <x-layout>
+	@if (session('message-green'))
+	<div class="alert alert-success alert-dismissible fade show text-center message-create-green ">
+		{{session('message-green')}} <i class="fa-solid fa-check"></i>
+	</div>
+@endif
 	<section id="home" class="hero-area bg_cover">
 		<div class="container">
 			<div class="row">
@@ -19,11 +24,6 @@
 			</div>
 		</div>
 	</section>
-	{{-- @if (session('message-green'))
-	<div class="alert alert-success text-center">
-		{{session('message-green')}} <i class="fa-solid fa-check"></i>
-	</div>
-@endif --}}
 	<div class="search-area">
 		<div class="container">
 			<div class="search-wrapper">

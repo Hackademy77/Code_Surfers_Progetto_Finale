@@ -18,13 +18,13 @@
         <td>
             @switch($role)
                 @case('amministratore')
-                    <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-success text-white fw-bold text-uppercase"> {{$role}} <i class="fa-solid fa-user-check" style="color: #ffffff;"></i></a>
+                    <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-success text-white fw-bold text-uppercase"> {{$role}} <i class="fa-solid fa-user-check"></i></a>
                     @break
                 @case('revisore')
-                    <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-success text-white fw-bold text-uppercase"> {{$role}} <i class="fa-solid fa-user-check" style="color: #ffffff;"></i></a>
+                    <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-success text-white fw-bold text-uppercase"> {{$role}} <i class="fa-solid fa-user-check"></i></a>
                     @break
                 @case('redattore')
-                    <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-success text-white fw-bold text-uppercase"> {{$role}} <i class="fa-solid fa-user-check" style="color: #ffffff;"></i></a>
+                    <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-success text-white fw-bold text-uppercase"> {{$role}} <i class="fa-solid fa-user-check"></i></a>
                     @break
             @endswitch
         </td>

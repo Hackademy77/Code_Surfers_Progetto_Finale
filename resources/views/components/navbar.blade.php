@@ -4,8 +4,8 @@
       <div class="row align-items-center">
         <div class="col-xl-12">
           <nav class="navbar navbar-expand-lg">
-            <a class=" mx-0" href="/">
-              <img id="logo" class="img-fluid" src="/img/logo.png" alt="Logo" width="170px">
+            <a class="mx-0" href="/">
+              <img id="logo" class="img-fluid" src="/img/logo.png" alt="Logo" width="150px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,7 @@
                 </li>
                 @endif
                 @endauth
-                <div class="dropdown">
+                <div class="dropdown mt-1 mt-md-0">
                   <li class="dropdown-toggle cursor-custom" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIE</li>
                   <ul class="dropdown-menu">
                   @foreach ($categories as $category)
@@ -64,8 +64,8 @@
             
             <ul class="header-btn d-flex justify-content-between ms-lg-5 margin-navbar">
               @if (Auth::user() != null)
-              <li>
-                <a href="#" class="main-btn account-btn mt-lg-1">
+              <li class="margin-log-custom">
+                <a href="#" class="main-btn account-btn mt-lg-1 mt-md-1 mt-1">
                   <i class="fa-regular fa-user ms-md-2 d-block d-md-none"></i>
                   <span class="d-none d-md-block">{{ Auth::user()->name }}<i class="fa-regular fa-user ms-2"></i></span>
                 </a>
@@ -78,17 +78,19 @@
                 </ul>
               </li>
               @else
-              <a href="{{route('login')}}" class="main-btn btn-hover fw-bold m-2 mx-md-5 me-3">
+              <div class="margin-login">
+              <a href="{{route('login')}}" class="main-btn btn-hover fw-bold m-2 mx-md-5 me-3 margin-login">
                 <i class="fa-solid fa-user ms-md-2 d-block d-md-none" style="color: #ffffff;"></i>
                 <p class="d-none text-light d-md-block">ACCEDI<i class="fa-solid fa-user ms-md-2" style="color: #ffffff;"></i></p></a>
+              </div>
               @endif
               @auth
               @if (Auth::user()->is_admin)
 
               @else
-              <li>
-                <a href="{{route('careers')}}" class="main-btn btn-hover fw-bold mt-2 me-5">
-                  <i class="fa-solid fa-briefcase ms-md-2 d-block d-md-none" style="color: #ffffff;"></i>
+              <li class="margin-log-custom2">
+                <a href="{{route('careers')}}" class="main-btn btn-hover fw-bold  mt-1 me-xl-3">
+                  <i class="fa-solid fa-briefcase ms-md-2 d-block d-md-none px-0 width-xs-custom" style="color: #ffffff;"></i>
                   <p class="d-none text-light d-md-block">LAVORA CON NOI<i class="fa-solid fa-briefcase ms-md-2" style="color: #ffffff;"></i></p></a>
               </li>
               @endif

@@ -20,13 +20,12 @@
       </p>
       <a href="{{route('article.show', compact('article'))}}" class="text-touppercase mt-2 text-dark fw-bold">Continua a leggere...</a>
       <div class="card-profile">
-        <img class="profile-img" src='https://images.unsplash.com/photo-1554780336-390462301acf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-        <div class="card-profile-info row">
+        <div class="row">
           <div class="col-6 col-md-12 d-flex justify-content-start align-items-end">
-          <h3 class="profile-name">Redatto il: {{$article->created_at->format('d/m/Y')}} </h3> 
+          <h3 class="profile-name">Redatto il: {{$article->created_at->format('d/m/Y')}} <i class="fa-solid fa-calendar-days"></i></h3> 
         </div>
         <div class="col-6 col-md-12 d-flex justify-content-start align-items-start">
-          <h3 class="profile-name fst-italic">Di: <a class="fw-bold text-capitalize"  href="{{route('filter.user', ['user' =>$article->user->id])}}">{{$article->user->name}}</a></h3>
+          <h3 class="profile-name fst-italic">Di: <a class="fw-bold text-capitalize"  href="{{route('filter.user', ['user' =>$article->user->id])}}">{{$article->user->name}} <i class="fa-solid fa-user-tie"></i></a></h3>
         </div>
         </div>
       </div>
