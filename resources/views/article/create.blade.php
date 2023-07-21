@@ -19,13 +19,13 @@
                     <form  action="{{ route('article.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <input class="form-control item border @error('title') is-invalid @enderror"  type="text" value="{{ old('title') }}" name="title" id="username" placeholder="Titolo" required>
+                            <input class="form-control item border @error('title') is-invalid @enderror"  type="text" value="{{ old('title') }}" name="title" id="username" placeholder="Titolo">
                             @error('title')
                             <div class="alert text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mt-2">
-                            <input class="form-control item border @error('subtitle') is-invalid @enderror" type="text" name="subtitle" value="{{ old('subtitle') }}" id="password" placeholder="Sottotitolo" required>
+                            <input class="form-control item border @error('subtitle') is-invalid @enderror" type="text" name="subtitle" value="{{ old('subtitle') }}" id="password" placeholder="Sottotitolo">
                             @error('subtitle')
                             <div class="alert text-danger">{{ $message }}</div>
                             @enderror
